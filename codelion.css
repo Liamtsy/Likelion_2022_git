@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap');
+* {
+	font-family: 'Akshar', sans-serif;
+}
+body,
+h1,
+h2 {
+	margin: 0px;
+	padding: 0px;
+}
+h1 {
+	font-size: 40px;
+	font-weight: bold;
+	font-style: italic;
+}
+h2 {
+	font-size: 25px;
+	font-weight: lighter;
+	color: #282828;
+	border-bottom: 1px solid #282828;
+	margin-bottom: 16px;
+	padding-bottom: 10px;
+}
+footer {
+	background-color: black;
+	color: coral;
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+}
+body {
+	margin: 0px;
+}
+.mainbox {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: right;
+	padding: 30px;
+	margin: 30px;
+	border: 2px solid black;
+	box-shadow: 0 1px 20px 0 rgba(0, 255, 0, 0.5);
+}
+section {
+	margin-bottom: 24px;
+}
+.name_text {
+	font-size: 20px;
+	color: #7c7c7c;
+	font-weight: bold;
+}
+.about_me_text {
+	font-size: 20px;
+	line-height: 32px;
+}
+.title_text {
+	font-size: 22px;
+	font-weight: bold;
+	color: #282828;
+	float: left;
+}
+.year_text {
+	font-size: 20px;
+	font-weight: bold;
+	color: #282828;
+	float: right;
+}
+.float_wrap {
+	overflow: hidden;
+}
+.dev_text {
+	font-size: 18px;
+	text-align: left;
+}
+.dev_subtext {
+	font-size: 15px;
+	color: #282828;
+	padding-left: 16px;
+	text-align: left;
+}
+.sns_img {
+	width: 50px;
+	height: 50px;
+}
