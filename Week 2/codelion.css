@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap');
+html {
+	background-color: black;
+}
 * {
 	font-family: 'Akshar', sans-serif;
 }
@@ -7,6 +10,7 @@ h1,
 h2 {
 	margin: 0px;
 	padding: 0px;
+	color: white;
 }
 h1 {
 	font-size: 40px;
@@ -16,8 +20,7 @@ h1 {
 h2 {
 	font-size: 25px;
 	font-weight: lighter;
-	color: #282828;
-	border-bottom: 1px solid #282828;
+	border-bottom: 1px solid white;
 	margin-bottom: 16px;
 	padding-bottom: 10px;
 }
@@ -37,8 +40,8 @@ body {
 	text-align: right;
 	padding: 30px;
 	margin: 30px;
-	border: 2px solid black;
-	box-shadow: 0 1px 20px 0 rgba(0, 255, 0, 0.5);
+	border: 2px solid white;
+	box-shadow: 0 1px 20px 0 rgba(23, 4, 235, 0.964);
 }
 section {
 	margin-bottom: 24px;
@@ -47,37 +50,46 @@ section {
 	font-size: 20px;
 	color: #7c7c7c;
 	font-weight: bold;
+	float: right;
 }
 .about_me_text {
 	font-size: 20px;
 	line-height: 32px;
+	text-align: left;
 }
-.title_text {
-	font-size: 22px;
+.institution_name {
+	font-size: 24px;
 	font-weight: bold;
-	color: #282828;
+	color: dodgerblue;
 	float: left;
 }
 .year_text {
 	font-size: 20px;
 	font-weight: bold;
-	color: #282828;
+	color: white;
 	float: right;
 }
 .float_wrap {
 	overflow: hidden;
+	/* 이 overflow: hidden은 float로 띄워져 있는 요소들을 다 묶어주고, 그다음에 오는 html 요소들이 이 float의 영향을 받지 않게 해준다.
+	원래 용도는 부모요소를 넘어가는 자식요소들은 잘라내는 것인데, 가두리 역할로 사용할 수도 있음. */
 }
-.dev_text {
-	font-size: 18px;
+.position_name {
+	font-size: 20px;
 	text-align: left;
 }
-.dev_subtext {
-	font-size: 15px;
-	color: #282828;
+.activity {
+	font-size: 18px;
+	color: white;
 	padding-left: 16px;
 	text-align: left;
 }
 .sns_img {
 	width: 50px;
 	height: 50px;
+}
+.face_pic {
+	width: 140px;
+	height: 200px;
+	float: left;
 }
