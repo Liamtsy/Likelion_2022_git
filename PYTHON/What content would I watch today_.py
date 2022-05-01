@@ -29,7 +29,7 @@ while True:
         contents_set = contents_set - set([content])
 print(contents_set)
 
-print("I'll recommend one content in 5 secs among", contents_set)
+print("I'll recommend one piece of content on", contents_set, "in 5 secs)
 for x in range(5,0,-1):
     print(x)
     time.sleep(1)
