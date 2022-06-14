@@ -142,6 +142,13 @@ console.log(arr1);
 let arr2 = [10, 20];
 console.log(arr2);
 console.log(arr2[1]);
+// 배열에 새 항목 추가 (맨 끝에)
+arr2.push(30);
+console.log(arr2);
+
+// 배열의 크기 알아내기 (데이터 개수)
+console.log(arr2.length);
+// 더 궁금하면 JS Array method 찾아보기
 
 let arr3 = [10, "abc", true, null, undefined, function(){}, {}];
 console.log(arr3);
@@ -323,6 +330,28 @@ console.log(changeType4)
 let changeType5 = 20 % '10';
 console.log(changeType5)
 
+// Assignment Operator 대입 연산자
+let num1 = 10;
+let num2 = 3;
+
+num1 += num2; // num1 = num1 + num2
+console.log(num1)
+num1 *= num2; // num1 = num1 * num2
+console.log(num1)
+num1 /= num2; // num1 = num1 / num2
+console.log(num1)
+num1 %= num2; // num1 = num1 % num2
+console.log(num1)
+num1 = num2; // 왼쪽에 오른쪽 것을 대입
+console.log(num1)
+
+// Increment and Decrement Operator 증감 연산자
+let num1 = 10;
+console.log(num1++); // 현재 값 출력 후 연산(plus 1)
+console.log(++num1); // 연산(plus 1) 후 출력
+console.log(num1--); // 현재 값 출력 후 연산(minus 1)
+console.log(--num1); // 연산(minus 1) 후 출력
+
 // ES6 Template Literal
 let str1 = `I'm Fine Thank You!`;
 console.log(str1);
@@ -337,6 +366,11 @@ let name2 = '윤채';
 
 let string = `${name1}는 ${name2}를 사랑합니다.`; //그냥 따옴표로 하면 인식 못함
 console.log(string);
+
+let string2 = (girl, boy) => {
+  console.log(`${girl}는 ${boy}를 사랑합니다.`);
+}
+string2('윤채', '태선이')
 
 // Comparison Operator 비교 연산자
 let comparison1 = 10 == 10; // 동등(==)
@@ -356,7 +390,7 @@ console.log(comparison3_1);
 
 let comparison4 = 10 !== 10; // 불일치(!==)
 console.log(comparison4);
-let comparison4_1 = 10 !== 10; // 불일치는 자료형까지 비교
+let comparison4_1 = 10 !== "10"; // 불일치는 자료형까지 비교
 console.log(comparison4_1);
 
 let comparison5 = 20 > 20; // ~보다 큰(>)
@@ -370,6 +404,40 @@ console.log(comparison7);
 
 let comparison8 = 20 <= 20; // ~보다 작거나 같다(>=)
 console.log(comparison8);
+
+// Logical Operator 논리 연산자
+let logic1 = 4 < 10 && 3 > 1; // and 연산자. 둘 다 true여야 true
+let logic1_1 = 4 < 10 && 3 < 1;
+console.log(logic1)
+console.log(logic1_1)
+
+let logic2 = 5 == 5 || 4 == 3; // or 연산자. 하나 이상 true면 true
+let logic2_1 = 4 == 5 || 2 == 3;
+console.log(logic2)
+console.log(logic2_1)
+
+let logic3 = !(4 == 1); // not 연산자. 값을 반대로
+let logic3_1 = !(4 == 4);
+console.log(logic3)
+console.log(logic3_1)
+
+// Operator Precedence 연산자 우선순위
+// 1. () 2. 단항 연산자(--, ++, !) 3. 산술 연산자 4. 비교 연산자 5. 논리 연산자 6. 대입 연산자
+let a = 10;
+let b = 20;
+let c = 30;
+let d = 40;
+
+let result;
+
+result = a > b || b >= c || c > d; // 문제 1 false
+console.log(result);
+
+result = a <= b && b < c && d >= c; // 문제 2 true
+console.log(result);
+
+result = !(a > b); // 문제 3 true
+console.log(result);
 
 // If Conditional Statement 조건문
 // 보통 여러 변수에 조건 복잡할 때 사용
@@ -417,10 +485,48 @@ switch (animal) {
 let i=1;
 while(i<10){
   console.log(i);
-  i = i + 1
+  i = i + 1; // i ++
 };
 // do-while loop, do 안에꺼 먼저 한 번 실행하고, 반복할지 안할지 결정
 let flag = false; 
 do{
   console.log('do-while');
 }while(flag === true);
+
+// for loop 반복문
+// for ([초기문]; [조건문]; [증감문]) {
+// 실행할 코드
+// }
+
+for (let step = 1; step <= 5; step ++) {
+  console.log(`I'm at ` + step + ` gate.`)
+}
+
+let count;
+for (let count = 10; count >=0; count --) {
+  console.log(count)
+}
+
+// Break and Continue
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { break; }
+  console.log(i)
+}
+
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { continue; }
+  console.log(i)
+}
+
+// Document Object Model (DOM)에서 Element node get 하기
+// 웹문서의 아이디에 의한 헬로인 엘리먼트를 가져와. 그리고 그 안의 HTML을 바꿔.
+document.getElementById('ID vaule').### = '@@@'; // ###와 @@@는 항상 구글링하기. 색상, 사이즈, 마진, 패딩 다 변경 가능
+// We call it a Selector(선택자))
+// EX) document.getElementById('hello').style.color = 'red'
+
+// 해당되는거 모두 가져와서 저장하기 때문에 뽑아쓰려면 인덱스 값으로? 잘 모르겠다 이건
+document.getElementsByTagName('li')[0].style.backgroundColor =
+	'black';
+document.getElementsByClassName('land')[1].style.backgroundColor =
+	'yellow';
+document.querySelectorAll('.land')[2].style.backgroundColor = 'pink';
