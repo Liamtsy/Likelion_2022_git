@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+		<h2 id="hello">Hi</h2>
+		<div class="alert-box" id="alert">X</div>
+		<button id="close">X</button>
+		<button onclick="Alert(`You didn't enter your ID`, 'block')">
+			ID
+		</button>
+		<button
+			onclick="Alert(`You didn't enter your password`, 'block')"
+		>
+			password
+		</button>
+		<!-- UI 만드는 법
+    1. 미리 디자인해놓고 숨긴다
+    2. 원할 때 JS를 이용해 보여준다 -->
+		<script>
+			document.getElementById('hello').innerHTML = 'Hey';
+			document.getElementById('hello').style.fontSize = '30px';
+			// 웹문서의 아이디에 의한 헬로인 엘리먼트를 가져와. 그리고 그 안의 HTML을 바꿔.
+			// document.getElementById('???').### = '@@@'; ###와 @@@는 항상 구글링하기. 색상, 사이즈, 마진, 패딩 다 변경 가능
+			// We call it a Selector(선택자))
+			// EX) document.getElementById('hello').style.color = 'red'
+			function Alert(enter, vision) {
+				document.getElementById('alert').style.display = vision;
+				document.getElementById('alert').innerHTML = enter;
+			}
+			document
+				.getElementById('close')
+				.addEventListener('click', function () {
+					document.getElementById('alert').style.display = 'none';
+				});
+			//위 요소가 Event(click) 되면 아래 코드 실행해주세요, event 많으니 구글링 EX) click -> mouseover
+		</script>
+		<script src="main.js"></script>
+	</body>
+</html>

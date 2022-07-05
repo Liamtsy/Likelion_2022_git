@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Song</title>
+	</head>
+	<body>
+		<style>
+			.blue {
+				width: 0px;
+				height: 5px;
+				background-color: tomato;
+			}
+			.lyrics {
+				width: 250px;
+				height: 150px;
+				overflow-y: scroll;
+				background-color: whitesmoke;
+			}
+		</style>
+		<div class="blue"></div>
+		<div class="lyrics">
+			<p>
+				One touch and you got me stoned<br />
+				Higher than I've ever known<br />
+				You call the shots and I follow<br />
+				Sunrise but the night's still young<br />
+				No words, but we speak in tongues<br />
+				If you let me, I might say too much<br />
+				Your touch blurred my vision It's your world, and I'm just in
+				it<br />
+				Even sober I'm not thinkin' straight<br />
+				'Cause I'm off my face, in love with you<br />
+				I'm out my head, so into you And I don't know how you do it<br />
+				But I'm forever ruined by you, ooh-ooh-ooh<br />
+				Can't sleep 'cause I'm way too buzzed<br />
+				Too late, now you're in my blood<br />
+				I don't hate the way you keep me up<br />
+				Your touch blurred my vision It's your world, and I'm just in
+				it<br />
+				Even sober I'm not thinkin' straight<br />
+				'Cause I'm off my face, in love with you<br />
+				I'm out my head, so into you And I don't know how you do it<br />
+				But I'm forever ruined by you, ooh-ooh-ooh<br />
+				Ooh, ooh-ooh Ooh-ooh-ooh-ooh-ooh-ooh Ooh-ooh-ooh-ooh Ooh,<br />
+				ooh-ooh Ooh-ooh-ooh-ooh-ooh-ooh Ooh-ooh-ooh-ooh<br />
+				'Cause I'm off my face, in love with you<br />
+				I'm out my head, so into you And I don't know how you do it<br />
+				But I'm forever ruined by you, ooh-ooh-ooh<br />
+				By you, ooh-ooh-ooh
+			</p>
+		</div>
+		<script>
+			let bar = document.querySelector('.blue');
+			let lyric = document.querySelector('.lyrics');
+			lyric.addEventListener('scroll', function () {
+				let scrollTop = lyric.scrollTop;
+				let scrollHeight = lyric.scrollHeight - lyric.clientHeight; // 이 부분 이해 잘하기! 다시 보면 이해 안될수도!
+				let per = scrollTop / scrollHeight;
+				bar.style.width = `${per * 250}px`;
+			});
+		</script>
+	</body>
+</html>
