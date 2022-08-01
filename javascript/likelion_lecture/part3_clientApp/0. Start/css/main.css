@@ -1,0 +1,28 @@
+html,
+body {
+	background-color: rgba(41, 37, 37, 0.988);
+	height: 100%;
+}
+#main {
+	background-color: black;
+	text-align: center;
+	width: 80%;
+	border-radius: 20px;
+	color: whitesmoke;
+}
+p {
+	font-size: 22px;
+	color: white;
+}
+.startBtn {
+	padding: 13px 50px;
+	border: 3px solid mediumspringgreen;
+	color: mediumspringgreen;
+	border-radius: 8px;
+	font-weight: bold;
+}
+.startBtn:hover,
+.startBtn:active {
+	background-color: mediumspringgreen;
+	color: white;
+}

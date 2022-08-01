@@ -1,0 +1,74 @@
+#qna {
+	display: none;
+	height: 80%;
+}
+
+.qBox {
+	text-align: center;
+	border-radius: 20px;
+	font-size: 24px;
+	width: 80%;
+	font-family: 'GmarketSansMedium';
+	padding: 5px 30px;
+	color: whitesmoke;
+}
+.aBox {
+	height: 70%;
+	display: flex;
+	flex-direction: column;
+}
+
+.answerList {
+	border: 2px solid black;
+	border-radius: 10px;
+	display: block;
+	width: 70%;
+	font-size: 20px;
+	padding: 5px 15px;
+	color: black;
+	background-color: white;
+	text-align: left;
+	font-family: 'GmarketSansMedium';
+}
+
+.answerList:link {
+	color: black;
+	border: 2px solid #868686;
+	text-decoration: none;
+	border: none;
+}
+.answerList:hover,
+.answerList:focus {
+	/* background-color: rgb(252, 206, 120); */
+	background-color: mediumspringgreen;
+	color: white;
+	border: 3px solid black;
+	text-decoration: none;
+}
+.status {
+	height: 25px;
+	width: 80%;
+	background-color: white;
+	border-radius: 20px;
+}
+
+.statusBar {
+	height: 100%;
+	border-radius: 7px;
+	background: mediumspringgreen;
+}
+
+.countStatus {
+	font-family: yg-jalnan;
+	text-align: center;
+	/* color: #868686; */
+	color: #a6a6a6;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+.resultBtn {
+	text-align: center;
+	margin-top: 20px;
+	display: inline;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Seungbin Yang CV</title>
+		<link rel="stylesheet" href="main.css" />
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body>
+		<div class="mainbox">
+			<div class="title-box">
+				<h1>Seungbin Yang</h1>
+				<p class="name-text">Undergraduate</p>
+			</div>
+			<section class="profileBox">
+				<img class="img" src="images/profile.png" />
+				<h2>PROFILE</h2>
+				<p class="about-me-text" id="profile">
+					Well-organized, highly motivated leader who pursues active
+					communication and lateral leadership. College student with a
+					high grade, useful artificial intelligence program
+					development experience. Currently completing Bachelor's in
+					Data Science and Software with specific focus on Compuer
+					Vision. Highly proficient spoken and written English.
+					Self-motivated, analytical and able to lead others, with
+					effective communication skills.
+				</p>
+			</section>
+
+			<section class="eduBox">
+				<img class="img" src="images/education.png" />
+				<h2>EDUCATION</h2>
+				<section id="education">
+					<div class="float-wrap">
+						<p class="title-text">Sungkyunkwan University</p>
+						<p class="year-text">Mar 2018 - Present</p>
+					</div>
+					<p class="desc-text">
+						Undergraduate double majoring in Data Science and Software
+					</p>
+					<p class="desc-text">Current GPA 4.3/4.5</p>
+					<p class="desc-text">
+						Jan 2020 - Jun 2021, Leave of Absence: Military Service
+					</p>
+					<p class="desc-text">Dec 2023, Expected graduation</p>
+
+					<div class="float-wrap">
+						<p class="title-text">Namsung High School</p>
+						<p class="year-text">Mar 2015 - Feb 2018</p>
+					</div>
+					<p class="desc-text">Majored in Natural Sciences</p>
+					<p class="desc-text">GPA 3.7/4.0</p>
+				</section>
+			</section>
+
+			<section class="workBox">
+				<img class="img" src="images/work.png" />
+				<h2>WORK EXPERIENCE</h2>
+				<section id="work">
+					<div class="float-wrap">
+						<p class="title-text">
+							Part-time Tutor, Comkid Homeschool
+						</p>
+						<p class="year-text">July 2021 - present</p>
+					</div>
+					<p class="desc-text">
+						Educated basic computer languages to elementary school
+						students
+					</p>
+
+					<div class="float-wrap">
+						<p class="title-text">
+							Military Service, Republic of Korea Army: Second
+							Security Group
+						</p>
+						<p class="year-text">Jan 2020 - Jun 2021</p>
+					</div>
+					<p class="desc-text">
+						Worked as an intelligence soldier in charge of security
+						and tactics analysis
+					</p>
+				</section>
+			</section>
+
+			<section class="actBox">
+				<img class="img" src="images/active.png" />
+				<h2>ACTIVITIES AND INTERESTS</h2>
+				<section id="act">
+					<div class="float-wrap">
+						<p class="title-text">LIKELION UNIV, Union Club</p>
+						<p class="year-text">Dec 2021 - present</p>
+					</div>
+					<p class="desc-text">Web Programing Club</p>
+
+					<div class="float-wrap">
+						<p class="title-text">Freshman Guid, SKKU Club</p>
+						<p class="year-text">Apr 2018 - Dec 2019</p>
+					</div>
+					<p class="desc-text">
+						Served as a guide to 40 freshmen. Provided overall
+						information about college life
+					</p>
+				</section>
+			</section>
+
+			<section class="refBox">
+				<img class="img" src="images/ref.png" />
+				<h2>REFERENCES</h2>
+				<div class="float-wrap" id="ref">
+					<p class="title-text">References available upon request</p>
+				</div>
+			</section>
+		</div>
+
+		<script>
+			var ID = prompt('Enter ID', '');
+			if (ID == 'skku') {
+				var PW = prompt('Enter PW', '');
+				if (PW == 1398) {
+					$('.mainbox').css('display', 'block');
+				} else {
+					alert('PW가 일치하지 않습니다.');
+					location.reload();
+				}
+			} else {
+				alert('ID가 일치하지 않습니다.');
+				location.reload();
+			}
+
+			var profVis = false;
+			$('.profileBox h2').click(function () {
+				if (profVis == false) {
+					$('#profile').slideDown(200);
+					profVis = true;
+				} else {
+					$('#profile').slideUp(200);
+					profVis = false;
+				}
+			});
+
+			var eduVis = false;
+			$('.eduBox h2').click(function () {
+				if (eduVis == false) {
+					$('#education').slideDown(200);
+					eduVis = true;
+				} else {
+					$('#education').slideUp(200);
+					eduVis = false;
+				}
+			});
+
+			var workVis = false;
+			$('.workBox h2').click(function () {
+				if (workVis == false) {
+					$('#work').slideDown(200);
+					workVis = true;
+				} else {
+					$('#work').slideUp(200);
+					workVis = false;
+				}
+			});
+
+			var actVis = false;
+			$('.actBox h2').click(function () {
+				if (actVis == false) {
+					$('#act').slideDown(200);
+					actVis = true;
+				} else {
+					$('#act').slideUp(200);
+					actVis = false;
+				}
+			});
+
+			var refVis = false;
+
+			$('.refBox h2').click(function () {
+				if (refVis == false) {
+					$('#ref').slideDown(200);
+					refVis = true;
+				} else {
+					$('#ref').slideUp(200);
+					refVis = false;
+				}
+			});
+		</script>
+	</body>
+</html>
